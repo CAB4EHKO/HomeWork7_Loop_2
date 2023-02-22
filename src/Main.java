@@ -3,6 +3,7 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
     public static void task1() {
         System.out.println("Task 1.");
@@ -37,6 +38,18 @@ public class Main {
             countryY = (countryY / 1000) * (fertilityOf1000 - mortalityOf1000) + countryY;
             years++;
             System.out.println("Год " + years + " численость населения составляет: " + countryY + " человек.");
+        }
+    }
+    public static void task4() {
+        System.out.println("Task 4.");
+        int sumOfMons = 15_000;
+        int totalDeposit  = 0;
+        int month = 0;
+        while (totalDeposit < 12_000_000) {
+            sumOfMons = (sumOfMons / 100) * 7 + sumOfMons;
+            totalDeposit = totalDeposit + sumOfMons;
+            month++;
+            System.out.println("Месяц " + month + " сумма накоплений равна: " + totalDeposit + " рублей.");
         }
     }
 }
