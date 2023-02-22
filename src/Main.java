@@ -6,6 +6,7 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
     }
 
     public static void task1() {
@@ -92,5 +93,15 @@ public class Main {
             countTime++;
         }
         System.out.println("Всего месяцев: " + countTime);
+    }
+    public static void task7() {
+        System.out.println("Task 7.");
+        int firstFriday = 3;
+        while (firstFriday <= 31) {
+            if (firstFriday % 7 == 0 || firstFriday > 0) {
+                System.out.println("Сегодня пятница, " + firstFriday + " число. Необходимо подготовить отчёт.");
+                firstFriday += 7;
+            }
+        }
     }
 }
