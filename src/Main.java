@@ -2,6 +2,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
     public static void task1() {
         System.out.println("Task 1.");
@@ -24,6 +25,18 @@ public class Main {
         System.out.println();
         for (; i > 0; i--) {
             System.out.print (i + " ");
+        }
+    }
+    public static void task3() {
+        System.out.println("Task 3.");
+        int countryY = 12_000_000;
+        int fertilityOf1000 = 17;
+        int mortalityOf1000 = 8;
+        int years = 0;
+        while (years < 10) {
+            countryY = (countryY / 1000) * (fertilityOf1000 - mortalityOf1000) + countryY;
+            years++;
+            System.out.println("Год " + years + " численость населения составляет: " + countryY + " человек.");
         }
     }
 }
