@@ -5,6 +5,7 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
     }
 
     public static void task1() {
@@ -69,9 +70,27 @@ public class Main {
             sumOfMons = (sumOfMons / 100) * k + sumOfMons;
             totalDeposit = totalDeposit + sumOfMons;
             if (month % 6 == 0) {
-            System.out.println("Месяц " + month + " сумма накоплений равна: " + totalDeposit + " рублей.");
-        }
+                System.out.println("Месяц " + month + " сумма накоплений равна: " + totalDeposit + " рублей.");
+            }
             month++;
         }
+    }
+
+    public static void task6() {
+        System.out.println("Task 6.");
+        int sumOfMons = 15_000;
+        int totalDeposit = 0;
+        int timeInMons = 9 * 12;
+        int k = 7;
+        int countTime = 0;
+        while (countTime <= timeInMons) {
+            sumOfMons = (sumOfMons / 100) * k + sumOfMons;
+            totalDeposit = totalDeposit + sumOfMons;
+            if (countTime % 6 == 0 && countTime > 0) {
+                System.out.println("Сумма через " + countTime + " месяцев: " + totalDeposit + " рублей.");
+            }
+            countTime++;
+        }
+        System.out.println("Всего месяцев: " + countTime);
     }
 }
