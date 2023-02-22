@@ -7,6 +7,7 @@ public class Main {
         task5();
         task6();
         task7();
+        task8();
     }
 
     public static void task1() {
@@ -94,6 +95,7 @@ public class Main {
         }
         System.out.println("Всего месяцев: " + countTime);
     }
+
     public static void task7() {
         System.out.println("Task 7.");
         int firstFriday = 3;
@@ -102,6 +104,20 @@ public class Main {
                 System.out.println("Сегодня пятница, " + firstFriday + " число. Необходимо подготовить отчёт.");
                 firstFriday += 7;
             }
+        }
+    }
+
+    public static void task8() {
+        System.out.println("Task 8.");
+        int thisYear = 2023;
+        int startYear = thisYear - 200;
+        int endYear = thisYear + 100;
+        int cometYear = 0;
+        while (cometYear <= endYear) {
+            if (cometYear >= startYear) {
+                System.out.println(cometYear);
+            }
+            cometYear += 79;
         }
     }
 }
